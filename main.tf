@@ -1,12 +1,5 @@
 provider "aws"{
-    region = "us-east-1"
-    # version = "~> 3.0"
-}
-
-provider "aws"{
-    alias = "west"
-    region = "us-west-2"
-    # version = "~> 3.0"
+    region = "${terraform.workspace == "production" ? "us-east-1" : "us-west-2"}"
 }
 
 terraform {
