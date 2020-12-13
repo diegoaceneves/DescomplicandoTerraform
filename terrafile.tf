@@ -1,6 +1,6 @@
 module "servers" {
     source  = "./servers"
-    servers = 1
+    servers = 5
 }
 
 output "ip_address" { 
